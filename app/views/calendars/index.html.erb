@@ -8,20 +8,20 @@
   <% end %>
 </div>
 <div>
-  <div class=calendar>
+  <div class='calendar'>
     <% @week_days.each do |day| %>
-      <div class='item'>
-        <div class='date'>
+      <ul class='item'>
+        <li class='date'>
           <% day[:month] %>/<% day[:date] %>
-        </div>
-        <ul class='content'>
+        </li>
+        <li class='content'>
         <% if day[:plans].length != 0 %>
           <% day[:plans].each do |plan| %>
-            <li class='plan-list'>・<%= plan %></li>
+            <div class='plan-list'>・<%= plan %></div>
           <% end %>
         <% end %>
-        </ul>
-      </div>
+        </li>
+      </ul>
     <% end %>
   </div>
 </div>
